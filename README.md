@@ -1,6 +1,4 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+# iped2-server
 
 これはiPED2のサーバーアプリケーションです
 
@@ -12,18 +10,10 @@
 
 （準備中）
 
-## プロジェクトへの参加方法
+## クレジット
 
-（準備中）
-
-## Credits
-
-TODO: Write credits
+中垣健志 (nakaken0629@gmail.com)
 
 ## ライセンス
 
 MIT
-
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
