@@ -7,8 +7,10 @@ module Core
     resource :users do
       desc 'register new account'
       post do
+        user = User.new()
+        user.save
         {
-            userid: 'myuserid',
+            userid: user.id,
             uuid: 'myuuid',
         }
       end

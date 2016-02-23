@@ -5,12 +5,17 @@ describe 'Core API' do
     it { expect(response).to have_http_status(:success) }
   end
 
-  context 'Create a new user without any information' do
-
-    before do
-      post "/api/v1/users"
+  describe 'POST #show' do
+    context 'without any information' do
+      before do
+        post "/api/v1/users"
+        @result = JSON.parse(response.body)
+      end
+      it_should_behave_like 'returns http success'
+      it 'returns new user\'s information' do
+        user = User.find_by(@result[:userid])
+        expect(user).not_to be_falsey
+      end
     end
-
-    it_should_behave_like 'returns http success'
   end
 end
